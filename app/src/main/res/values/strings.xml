@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Item Fee Data</string>
+    <string name="clear_memory">Clear Cache</string>
+    <string name="item_fee_id_instruction">Provide Item Fee ID in the input field below to view its information</string>
+    <string name="view_info">View Info</string>
+    <string name="item_fee_id_input_hint">Item Fee ID</string>
+</resources>
