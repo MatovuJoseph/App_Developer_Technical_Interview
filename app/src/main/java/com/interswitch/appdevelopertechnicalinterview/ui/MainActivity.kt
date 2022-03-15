@@ -21,6 +21,7 @@ import com.interswitch.appdevelopertechnicalinterview.data.model.ItemFee
 import com.interswitch.appdevelopertechnicalinterview.data.storage.LocalStorageDatabase
 import com.interswitch.appdevelopertechnicalinterview.databinding.ActivityMainBinding
 import com.interswitch.appdevelopertechnicalinterview.ui.adapters.FeeGroupAdapter
+import com.interswitch.appdevelopertechnicalinterview.ui.adapters.PayCongurationAdapter
 import org.json.JSONObject
 import kotlin.concurrent.thread
 
@@ -178,17 +179,10 @@ class MainActivity : AppCompatActivity() {
 
         /*pay configuration data*/
         if (item.payConfiguration?.isNotEmpty() == true) {
-            val payConfiguration = item.payConfiguration[0]
-            binding.source.text = payConfiguration.source
-            binding.payType.text = payConfiguration.payType
-            binding.payValue.text = payConfiguration.payValue.toString()
-            binding.maximumFeeBorn.text = payConfiguration.maximumFeeBorn.toString()
-            binding.minimumFeeBorn.text = payConfiguration.minimumFeeBorn.toString()
-            binding.bandCode.text = payConfiguration.bandCode
-            binding.hasExcise.text = payConfiguration.hasExcise.toString()
-            binding.isPayVAT.text = payConfiguration.isPayVAT.toString()
-            binding.hasWithholdingTax.text = payConfiguration.hasWithholdingTax.toString()
-            binding.hasServiceCharge.text = payConfiguration.hasServiceCharge.toString()
+            //val payConfiguration = item.payConfiguration[0]
+
+            binding.payCongRv.adapter = PayCongurationAdapter(this,item.payConfiguration)
+
         }
 
 
